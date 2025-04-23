@@ -1,0 +1,97 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    reorder nameChildren = ["ocean_wave", "Turn_Table"]
+    def "Turn_Table" (
+        active = true
+        customData = {
+            float3 rotationEulerHint = (0, 4.712389, 0)
+        }
+        references = @Turn_Table.usdz@
+    )
+    {
+        quatf xformOp:orient = (0.70710677, 0, -0.70710677, 0)
+        float3 xformOp:scale = (0.01, 0.01, 0.01)
+        float3 xformOp:translate = (0, 0.5, -0.5)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "Meshes"
+        {
+            over "Sketchfab_model"
+            {
+                over "_14f6427026b40be85919a5cba0ed7a3_fbx"
+                {
+                    over "Object_2"
+                    {
+                        over "RootNode"
+                        {
+                            over "Needle_low_low" (
+                                customData = {
+                                    float3 rotationEulerHint = (-1.5700979, -0.4759513, -0.0013813202)
+                                }
+                            )
+                            {
+                                quatf xformOp:orient = (0.6873032, -0.6870535, -0.16627412, -0.16710691)
+                                float3 xformOp:scale = (100, 100, 99.99999)
+                                float3 xformOp:translate = (-8.844709, 8.590844, -11.322745)
+                                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        over "Materials"
+        {
+            over "Discplate_MAT"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+
+            over "Decals"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+
+            over "TurnTable_Detail_MAT"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+
+            over "TurnBox_MAT"
+            {
+                token outputs:mtlx:surface
+                token outputs:realitykit:vertex
+            }
+        }
+    }
+
+    def RealityKitAudioFile "Ocean_Wave_wav"
+    {
+        uniform asset file = @Ocean_Wave.wav@
+        uniform bool shouldLoop = 0
+    }
+
+    def RealityKitAudioFile "Forest_Morning_mp3"
+    {
+        uniform asset file = @Forest_Morning.mp3@
+        uniform bool shouldLoop = 0
+    }
+
+    def RealityKitAudioFile "Sand_Storm_mp3"
+    {
+        uniform asset file = @Sand_Storm.mp3@
+        uniform bool shouldLoop = 0
+    }
+}
+
