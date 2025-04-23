@@ -35,5 +35,5 @@ The turntable consists of four operable parts:
 2. Load the corresponding Animation and music Resources.
 
 <video width="720" height="480" controls>
-  <source src="https://github.com/mrriddler-feng/DJ/Res/dj_demo.mp4" type="video/mp4">
+  <source src="https://github.com/mrriddler-feng/DJ/blob/main/Res/dj_demo.mp4" type="video/mp4">
 </video>
