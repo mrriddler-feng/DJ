@@ -2,7 +2,10 @@
 
 DJ是一个VisionPro项目，在空间中模拟了一个可交互的打碟机，通过操作部件播放音乐。
 
+https://github.com/user-attachments/assets/4ceea35e-e91c-4f18-bcd6-7432f7e4c8a4
+
 ## 交互性
+
 
 共有四个部分可操作：
 
